@@ -10,6 +10,8 @@
 ![Langfuse](https://img.shields.io/badge/Langfuse-Observability-yellowgreen.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+![Multi-agent cartoon](docs/images/agents_architecture_cartoon.png)
+
 A powerful, multi-agent AI research system built with **LangGraph**, **RedisVL**, and **PostgreSQL**. The Agentic Research System is designed to intelligently route queries, break down complex topics into sub-queries, gather real-time data using Model Context Protocol (MCP) tools, and synthesize comprehensive, logically grounded answers. It leverages a dual-LLM strategy and incorporates Human-in-the-Loop (HITL) checkpoints for ultimate accuracy.
 
 ---

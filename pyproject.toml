@@ -1,0 +1,52 @@
+[project]
+name = "agentic-research-system"
+version = "0.1.0"
+description = "Agentic Research System with LangGraph, RedisVL, and PostgreSQL"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langgraph>=0.4",
+    "langchain>=0.3",
+    "langchain-deepseek",
+    "langchain-community",
+    "pydantic>=2.0",
+    "pydantic-settings",
+    "pyyaml",
+    "python-dotenv",
+    "psycopg2-binary",
+    "redisvl",
+    "redis",
+    "sentence-transformers",
+    "fastmcp",
+    "langchain-mcp-adapters",
+    "rapidfuzz",
+    "tavily-python",
+    "arxiv",
+    "firecrawl-py",
+    "requests",
+    "gradio",
+    "langfuse"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "ruff",
+    "deepeval"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["src*", "config*"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

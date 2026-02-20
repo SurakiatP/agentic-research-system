@@ -1,0 +1,36 @@
+# LLM Model Configuration
+# ────────────────────────────────────────────────────
+# default_model  : Agent (Chat) — DeepSeek-V3.2 Non-thinking Mode
+# judge_model    : Evaluator — DeepSeek-V3.2 Thinking Mode (deepseek-reasoner)
+# planner_model  : (Legacy alias for judge — kept for backward compat)
+# ────────────────────────────────────────────────────
+
+default_model:
+  name: "deepseek-chat"
+  provider: "deepseek"
+  temperature: 0.0
+  max_tokens: 8192
+  api_base: "https://api.deepseek.com"
+  input_price: 0.28
+  output_price: 0.42
+
+judge_model:
+  name: "deepseek-reasoner"
+  provider: "deepseek"
+  temperature: 0.0
+  max_tokens: 2048
+  api_base: "https://api.deepseek.com"
+  input_price: 0.28
+  output_price: 0.42
+
+planner_model:
+  name: "deepseek-reasoner"
+  provider: "deepseek"
+  temperature: 0.0
+  max_tokens: 4096
+
+embedding_model:
+  name: "Qwen/Qwen3-Embedding-0.6B"
+  provider: "huggingface"
+  dimensions: 1024
+

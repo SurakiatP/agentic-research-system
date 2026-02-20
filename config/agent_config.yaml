@@ -1,0 +1,14 @@
+# Agent Behavior Configuration
+
+manager_agent:
+  max_sub_queries: 5
+  max_loops: 3
+  timeout_seconds: 600
+
+researcher_agent:
+  max_search_results: 5
+  max_retries: 3
+  timeout_seconds: 300
+
+summarizer_agent:
+  max_tokens: 8000

@@ -1,0 +1,13 @@
+# Semantic Cache Configuration
+
+redis_vl:
+  # IMPORTANT: Index name was changed from 'research_cache' to 'research_cache_v2'
+  # to force schema migration (added 'result_type' tag field for Level 1/2 filtering)
+  index_name: "research_cache_v2"
+  distance_threshold: 0.25
+  ttl_seconds: 3600  # 1 hour
+  vector_field_name: "embedding"
+  overwrite_index: false
+
+rapidfuzz:
+  score_cutoff: 90.0

@@ -1,0 +1,18 @@
+# MCP Tools Configuration
+
+tavily:
+  enabled: true
+  max_results: 5
+  search_depth: "advanced"
+
+brave:
+  enabled: true
+  max_results: 5
+
+firecrawl:
+  enabled: true
+  scrape_formats: ["markdown"]
+
+arxiv:
+  enabled: true
+  max_results: 3

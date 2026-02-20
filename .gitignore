@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+.venv/
+env/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment Variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Logs & Data
+data/logs/
+data/exports/
+*.log
+
+# Redis/Postgres local data (if any)
+*.rdb
+*.aof
+
+# Inspection & Debug outputs
+inspection_output*.txt
+test_tools_output*.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+scripts/
+.python-version

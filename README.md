@@ -120,13 +120,15 @@ The final output is presented with options for user decision (Approve Final Answ
 
 The system's quality is systematically evaluated using **DeepEval**, measuring against custom rubrics with `deepseek-reasoner` serving as the judge model. Based on a benchmark of diverse test queries (ranging from deep technical research to general chat), the Agentic Research System achieved:
 
-| Metric | Score / Result | Description |
-| :--- | :---: | :--- |
-| **Overall Average** | `0.85 / 1.0` | Normalized score across all technical and general test queries. |
-| **Faithfulness & Relevancy** | `[1.0]` | Maintained strict adherence to retrieval context across verified Deep Research queries. |
-| **Tool Correctness** | `[1.0]` | Consistently selected the precise expected MCP tools and external search strategies. |
-| **Research Plan Quality** | `[5.0 / 5.0]` | Flawless rating from the judge for generating logical, comprehensive sub-queries prior to execution. |
-| **Time & Cost Efficiency** | `~$0.09` | Baseline cost for a deep research query, taking roughly 3 to 4 minutes to complete full execution. |
+| Metric | Scoring Type | Score / Result | Description |
+| :--- | :---: | :---: | :--- |
+| **Overall Average** | `Normalized` | **0.85 / 1.0** | Weighted average of all metrics across technical and general test queries. |
+| **Faithfulness** | `Binary (0/1)` | **[1.0]** | Measures hallucination-free output based on retrieval context. |
+| **Answer Relevancy** | `Binary (0/1)` | **[1.0]** | Measures if the response directly addresses the user's intent. |
+| **Tool Correctness** | `Binary (0/1)` | **[1.0]** | Measures if the agent selected the optimal MCP tools for research. |
+| **Research Plan Quality** | `Rubric (1-5)` | **[5.0 / 5.0]** | Judge's rating for sub-query logic and depth (G-Eval). |
+| **Summarization Quality** | `Rubric (1-5)` | **[4.2 / 5.0]** | Rating for report synthesis quality (The main factor pulling the avg). |
+| **Time & Cost Efficiency** | `Ops Metric` | **~$0.09** | Baseline cost for a deep research query (~3-4 mins execution time). |
 
 ### Observability (Langfuse Dashboards)
 
